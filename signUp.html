@@ -1,0 +1,426 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        * {
+            margin: 0px;
+            padding: 0px;
+            font-family: axiforma-regular, -apple-system, BlinkMacSystemFont, Segoe UI, Roboto, Helvetica, Arial, sans-serif;
+
+        }
+
+        #nav {
+            background-color: black;
+            height: 60px;
+            display: flex;
+            justify-content: space-around;
+            position: sticky;
+            top: 0.1px;
+        }
+
+        #img>a>img {
+            height: 40px;
+            margin: 10px 0px 0px -226px;
+        }
+
+        #blog {
+            display: flex;
+            justify-content: space-between;
+            /* border: 1px solid white; */
+            width: 377px;
+            margin-right: -200px;
+        }
+
+        #blog>a>p {
+            color: white;
+            font-size: 15px;
+            line-height: 20px;
+            height: 100%;
+            font-weight: 700;
+            margin-top: 19px;
+        }
+
+        #footbar {
+            height: 800px;
+            background-color: #000;
+            color: rgb(196, 192, 192)
+        }
+
+        #footbar span {
+            cursor: pointer;
+        }
+
+        #footbar span:hover {
+            color: white
+        }
+
+        #fb1 {
+            height: 105px;
+            width: 89%;
+            margin: auto;
+            border-bottom: 1px solid rgb(80, 79, 79);
+        }
+
+        #fb1 span {
+            margin: 25px 30px -13px 0px;
+
+        }
+
+        #fb1>div {
+            display: flex;
+        }
+
+        #fb2 {
+            height: 565px;
+            width: 89%;
+            margin: auto;
+            border-bottom: 1px solid rgb(80, 79, 79);
+        }
+
+        #fb2>h4 {
+            margin: 22px 0px;
+        }
+
+        #fb2>div {
+            margin-top: 22px;
+        }
+
+        #fb2>h5 {
+            margin-top: 25px;
+        }
+
+        #fb2>div>span {
+            margin-right: 30px;
+        }
+
+        #ln {
+            margin-top: 20px;
+        }
+
+        #ln>span {
+            margin-right: 30px;
+            flex-wrap: wrap;
+        }
+
+        #fs {
+            margin-top: 20px;
+        }
+
+        #fs>span {
+            margin-right: 30px;
+        }
+
+        #fb3 {
+            width: 89%;
+            margin: auto;
+            display: flex;
+
+        }
+
+        #fb3>div>a>img {
+            height: 60px;
+            margin-top: 16px;
+        }
+
+        #fb3>div:nth-child(2) {
+            margin: 34px 0px 0px 20px;
+        }
+
+        #fb3>div:nth-child(3)>img {
+            height: 50px;
+            margin-top: 20px;
+            margin-left: 260px;
+        }
+
+        #fb3>div:nth-child(4)>img {
+            height: 50px;
+            margin-top: 20px;
+            margin-left: 60px;
+        }
+
+        #mid {
+            height: 600px;
+        }
+        
+#second{
+    width: 188px;
+}
+#second>h6{
+    text-transform: uppercase;
+   font-size: 12px;
+   margin-left: 90px;
+}
+#second>div{
+    font-size: 12px;
+    margin-top: 46px;
+    margin-left: 90px;
+}
+#third{
+    width: 166px;   
+}
+#third>img{
+    height: 20px;
+    margin-top: 60px;
+    margin-left: 20px;
+}
+#mid{
+    text-align: center;
+    height: 820px;
+}
+#images{
+    margin-right: 60px;
+}
+#images>img{
+width: 20px;
+float: right;
+margin-top: -16px;
+margin-right: 20px;
+cursor: pointer;
+}
+
+#lastfb{
+display: flex;
+margin-top: 40px;
+}
+#bot{
+color:#727174;
+margin-left: 80px;
+font-size: 12px;
+font-family: sans-serif;
+}
+#term{
+color:#727174;
+margin-left: 12px;
+font-size: 13px;
+font-family: sans-serif;
+}
+#priv{
+color:#727175;
+margin-left: 12px;
+font-size: 13px;
+font-family: sans-serif;
+}
+#fb{
+    display: flex;
+}
+
+#mid>h4{
+    margin-top: 100px;
+    font-size: 2.5rem;
+    font-weight: 100;
+}
+#fbb{
+    padding: 12px 95px;
+    margin-left: 42  0px;
+    margin-top: 20px;
+    text-decoration: none;
+    background-color: rgb(93, 93, 201);
+    color:white;
+    border: none;
+    text-transform: uppercase;
+    cursor: pointer;
+    text-decoration: none;
+    margin-right: 25px;
+    margin-left: 10px;
+    border-radius: 5px;
+}
+#gol{
+    padding: 12px 75px;
+    margin-left: 42  0px;
+    margin-top: 20px;
+    text-decoration: none;
+    background-color: rgb(235, 79, 79);
+    color:white;
+    border: none;
+    text-transform: uppercase;
+    cursor: pointer;
+    text-decoration: none;
+    margin-right: 30px;
+    border-radius: 5px;
+}
+#btns{
+    display: flex;
+    justify-content: center;
+}
+#or{
+    font-size: 11px;
+    margin: 38px 0px 25px 0px;
+}
+form>input{
+    height: 18px;
+    width: 280px;
+    margin-bottom: 12px;
+    padding: 10px 10px 10px 16px;
+    font-size: 16px;
+}
+#join{
+    height: 50px;
+    background-color: rgb(42, 118, 233);
+    border: none;
+    color: white;
+    border-radius: 4px;
+    cursor: pointer;
+    font-size: 18px;
+    word-spacing: 5px;
+}
+#join:hover{
+    background-color: rgb(73, 138, 235);
+}
+#chb{
+    margin: 20px 462px 0px 0px;
+}
+#pc{
+    margin:-24px -76px 0px 0px;
+}
+
+
+
+    </style>
+</head>
+
+<body>
+
+    <div id="nav">
+        <div id="img">
+            <a href="LandingPage.html"> <img
+                    src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcRJyN8o4Dj6hfqO_hrinsac8XKeR4jJN7qLpQ&usqp=CAU"
+                    alt="">
+            </a>
+        </div>
+        <div id="blog">
+            <a href="login_signup.html">
+                <p>Blog</p>
+            </a>
+            <a href="login_signup.html">
+                <p>Register As A Professional</p>
+            </a>
+
+        </div>
+    </div>
+
+    <div id="mid">
+        <h4>Sign Up</h4>
+        <div id="btns" >
+            <a href="https://www.facebook.com/"><button id="fbb" >Facebook</button></a>
+        <a href="https://accounts.google.com/v3/signin/identifier?dsh=S1594547331%3A1668072754532786&authuser=0&continue=https%3A%2F%2Fmail.google.com&ec=GAlAFw&hl=en-GB&service=mail&flowName=GlifWebSignIn&flowEntry=AddSession"><button id="gol" >&nbsp&nbsp&nbsp Google &nbsp&nbsp&nbsp&nbsp</button></a>
+    </div>
+            <p id="or">OR</p>
+           
+        <form action="signin.html">
+            <input type="text" placeholder="First Name" id="fist"><br>
+            <input type="text" placeholder="Last Name" id="last" ><br>
+            <input type="email" placeholder="Email Address" id="mail" ><br>
+            <input type="text" placeholder="Username" id="user" ><br>
+            <input type="password" placeholder="Password" id="pass"><br>
+            <input type="password" placeholder="Confirm Password" id="cpass" ><br> 
+            <input type="checkbox" id="chb" >
+            <p id="pc" >I agree to the Fitness Blender terms of service and privacy policy &nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp</p><br>
+            <input type="submit" id="join" value="JOIN">
+        </form>
+        <div id="already">Already a member?<a href="signin.html" target="blank" > Sign In</a></div>
+    </div>
+
+    <div id="footbar">
+
+        <div id="fb1">
+            <div> <span>About Us</span> <span>UC Impact</span><span>Terms & Conditions</span><span>Privacy Policy</span>
+                <span>Interest-Based Advertising</span><span>Anti Descrimination Policy</span><span>Partner Welfare
+                    Policy</span>
+            </div>
+            <div>
+                <span>Information Security Policy Statement &
+                    Objective</span><span>Blog</span><span>Reviews</span><span>Neer
+                    Me</span><span>Careers</span><span>Gift Cards</span><span>Contact Us</span><span>Quick Links</span>
+            </div>
+        </div>
+
+        <div id="fb2">
+            <h4>Serving In</h4>
+            <h5>IND</h5>
+            <div>
+                <span>Pune</span><span>Mumbai</span><span>Nagpur</span><span>Thane</span><span>Aurangabad</span><span>Nagpur</span><span>Delhi</span><span>Amritsar</span><span>Hydrabad</span><span>Indore</span><span>Jaipur</span><span>Ludhiana</span><span>Coimbatur</span><br>
+                <div id="ln">
+                    <span>Dehradun</span>Mysure<span></span><span>Merut</span><span>Jaisalmer</span><span>Jodhpur</span><span>Barner</span><span>Bikaner</span><span>Jabalpur</span><span>Jaipur</span><span>Ranchi</span><span>Patna</span><span>Panipat</span><span>Nashik</span><span>Ahmedabad</span>
+                </div>
+                <div id="fs">
+                    <span>Agra</span><span>Amritsar</span><span>Vijaywada</span><span>Varanasi</span><span></span>
+                </div>
+            </div>
+
+            <h5>USA</h5>
+            <div id="fs"> <span>Dubai</span><span>Abu Dhabi</span><span>Sharjah</span><span></span></div>
+
+            <h5>SGP</h5>
+            <div id="fs"> <span>Singapur</span></div>
+
+            <h5>JPN</h5>
+            <div id="fs"> <span>Tokyo</span></div>
+
+            <h5>KSA</h5>
+            <div id="fs"> <span>Jeddha</span> <span>Riyadh</span> </div>
+
+        </div>
+
+        <div id="fb3">
+            <div>
+                <a href=""> <img
+                        src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcRJyN8o4Dj6hfqO_hrinsac8XKeR4jJN7qLpQ&usqp=CAU"
+                        alt="">
+                </a>
+            </div>
+
+            <div>@2014-22 UrbanClap Technologies India Pvt. Ltd.</div>
+            <div><img src="https://images.urbanclap.com/image/upload/categories/category_v2/category_7f907eb0.png"
+                    alt=""></div>
+            <div><img src="https://images.urbanclap.com/image/upload/categories/category_v2/category_7f741d10.png"
+                    alt=""></div>
+
+        </div>
+
+    </div>
+
+</body>
+
+</html>
+
+<script>
+    document.querySelector("form").addEventListener("submit" , fun)
+        let arr= JSON.parse(localStorage.getItem("Data")) || [];  
+        function fun(eve){      
+        let ftrs=document.querySelector("#fist").value;
+        let last=document.querySelector("#last").value;
+        let emel=document.querySelector("#mail").value;
+        let usre=document.querySelector("#user").value;
+        let pswd=document.querySelector("#pass").value;
+        let cfpw=document.querySelector("#cpass").value;
+        let ckbx=document.querySelector("#chb").value;
+        let obj={
+            fir:ftrs,
+            las:last,
+            eml:emel,
+            usr:usre,
+            pas:pswd,
+            cpw:cfpw,
+            ckb:ckbx,
+        }
+            let count=0;
+        for(let x in obj){
+            if(obj[x]!==""){
+                count++;
+            }
+        }
+        if(count!==7){
+            alert("Please fill all the data !!!");
+             eve.preventDefault();
+        }
+        else if(count==7){
+            arr.push(obj);
+            localStorage.setItem("Data" , JSON.stringify(arr)); 
+        }      
+        }
+        </script>

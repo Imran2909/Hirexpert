@@ -1,0 +1,579 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        * {
+            margin: 0px;
+            padding: 0px;
+            font-family: axiforma-regular, -apple-system, BlinkMacSystemFont, Segoe UI, Roboto, Helvetica, Arial, sans-serif;
+
+        }
+
+        #nav {
+            background-color: black;
+            height: 60px;
+            display: flex;
+            justify-content: space-around;
+            position: sticky;
+            top: 0.1px;
+        }
+
+        #img>a>img {
+            height: 40px;
+            margin: 10px 0px 0px -226px;
+        }
+
+        #blog {
+            display: flex;
+            justify-content: space-between;
+            /* border: 1px solid white; */
+            width: 377px;
+            margin-right: -200px;
+        }
+
+        #blog>a>p {
+            color: white;
+            font-size: 15px;
+            line-height: 20px;
+            height: 100%;
+            font-weight: 700;
+            margin-top: 19px;
+        }
+
+        #fst {
+            display: flex;
+        }
+
+        #fst>div {
+            /* border: 1px solid red; */
+            height: 548px;
+            width: 238px;
+        }
+
+        #fst>div>img {
+            height: 100%;
+        }
+
+        #fst>div:nth-child(2) {
+            /* border: 1px solid rgb(21, 255, 0); */
+            height: 548px;
+            width: 1228px;
+            background-color: black;
+            color: white;
+            background: linear-gradient(90deg, transparent, #000 40%);
+
+        }
+
+        #fst>div:nth-child(2)>P {
+            margin: 60px 0px 0px 500px;
+            letter-spacing: 10px;
+            font-size: 18px;
+            color: rgb(219, 215, 215);
+
+        }
+
+        #fst>div:nth-child(2)>h3 {
+            margin: 20px 0px 0px 500px;
+            font-size: 34px;
+            color: white;
+        }
+
+        #fst>div:nth-child(2)>h3+p {
+            letter-spacing: 0px;
+            margin-top: 14px;
+            font-size: 20px;
+        }
+
+        #select {
+            /* border: 1px solid red; */
+            border-radius: 4px;
+            height: 135px;
+            width: 330px;
+            margin: 36px 0px 0px 498px;
+            background-color: white;
+            color: black;
+        }
+
+        #select>p {
+            font-size: 18px;
+            font-weight: 700;
+            padding: 20px 0px 10px 10px;
+        }
+
+        #filter {
+            margin: 10px 0px 10px 10px;
+            height: 40px;
+            width: 300px;
+            font-size: 15px;
+            padding-bottom: 2px;
+            padding-left: 10px;
+        }
+
+        #sec {
+            height: 545px;
+            display: flex;
+        }
+
+        #line {
+            height: 15px;
+            background-color: rgb(206, 211, 211);
+        }
+
+        #sec>div:nth-child(1) {
+            /* border: 1px solid red; */
+            width: 530px;
+            height: 380px;
+            margin: 75px 0px 0px 108px;
+        }
+
+        #sec>div:nth-child(2) {
+            /* border: 1px solid red; */
+            width: 525px;
+            height: 323px;
+            margin: 75px 0px 0px 75px;
+            border-radius: 8px;
+            background-color: #f2f7fd;
+        }
+
+        #sec>div>h3 {
+            font-size: 32px;
+            font-weight: 600;
+            line-height: 1.5;
+            /* color: rgb(163, 34, 34); */
+            margin-bottom: 36px;
+        }
+
+        #sec>div>div {
+            /* border: 1px solid red; */
+            height: 75px;
+            display: flex;
+            margin-bottom: 33px;
+        }
+
+        #sec>div>div>img {
+            height: 100%;
+            margin-right: 25px;
+        }
+
+        .big {
+            font-size: 19px;
+            font-weight: 700;
+            line-height: 1.5;
+            margin-top: 8px;
+        }
+
+        .small {
+            color: rgb(110, 110, 110)
+        }
+
+        #asure>img {
+            width: 102px;
+            margin: 50px 0px 0px 50px;
+        }
+
+        #asure>h1 {
+            margin: 15px 0px 0px 50px;
+            font-size: 35px;
+        }
+
+        #asure>p {
+            margin: 17px 0px 0px 54px;
+            font-size: 19px;
+        }
+
+        #book {
+            height: 550px;
+            /* border: 1px solid red; */
+            display: flex;
+        }
+
+        #book>div {
+            height: 450px;
+            margin-top: 100px;
+            /* border: 1px solid rgb(0, 0, 0); */
+            width: 37.5%;
+            margin-left: 100px;
+        }
+
+        #book>div>h2 {
+            font-weight: 700;
+            font-size: 32px;
+            margin-top: 8px;
+        }
+
+        #book>div>p {
+            font-size: 20px;
+            margin-top: 8px;
+            color: rgb(65, 64, 63);
+        }
+
+        #spns {
+            border: 1px solid;
+            height: 54px;
+            margin-top: 50px;
+            margin-left: 2px;
+            border-radius: 4px;
+            display: flex;
+        }
+
+        #spns>span>img {
+            height: 18px;
+            margin: 18px 0px 0px 15px;
+        }
+
+        #spns>span:nth-child(2) {
+            font-weight: bold;
+            margin: 16px 0px 0px 6px;
+        }
+
+        #ip {
+            height: 42px;
+            width: 300px;
+            margin: 6px 0px 0px 10px;
+            border-left: 1px solid rgb(219, 216, 216);
+            border-bottom: none;
+            border-right: none;
+            border-top: none;
+            font-size: 22px;
+        }
+
+        #but {
+            width: 90px;
+            height: 44px;
+            margin: 5px 0px 0px 18px;
+            background-color: rgb(37, 36, 36);
+            color: white;
+            font-weight: bold;
+            border-radius: 4px;
+            padding-bottom: 3px;
+        }
+
+        #imges {
+            display: flex;
+        }
+
+        #imges>img {
+            width: 138px;
+            margin: 35px 16px 0px 0px;
+        }
+
+        #two {
+            display: flex;
+        }
+
+        #two>img {
+            height: 480px;
+            margin: -30px 60px 0px 0px;
+        }
+
+        #footbar {
+            height: 800px;
+            background-color: #000;
+            color: rgb(196, 192, 192)
+        }
+
+        #footbar span {
+            cursor: pointer;
+        }
+
+        #footbar span:hover {
+            color: white
+        }
+
+        #fb1 {
+            height: 105px;
+            width: 89%;
+            margin: auto;
+            border-bottom: 1px solid rgb(80, 79, 79);
+        }
+
+        #fb1 span {
+            margin: 25px 30px -13px 0px;
+
+        }
+
+        #fb1>div {
+            display: flex;
+        }
+
+        #fb2 {
+            height: 565px;
+            width: 89%;
+            margin: auto;
+            border-bottom: 1px solid rgb(80, 79, 79);
+        }
+
+        #fb2>h4 {
+            margin: 22px 0px;
+        }
+
+        #fb2>div {
+            margin-top: 22px;
+        }
+
+        #fb2>h5 {
+            margin-top: 25px;
+        }
+
+        #fb2>div>span {
+            margin-right: 30px;
+        }
+
+        #ln {
+            margin-top: 20px;
+        }
+
+        #ln>span {
+            margin-right: 30px;
+            flex-wrap: wrap;
+        }
+
+        #fs {
+            margin-top: 20px;
+        }
+
+        #fs>span {
+            margin-right: 30px;
+        }
+
+        #fb3 {
+            width: 89%;
+            margin: auto;
+            display: flex;
+
+        }
+
+        #fb3>div>a>img {
+            height: 60px;
+            margin-top: 16px;
+        }
+
+        #fb3>div:nth-child(2) {
+            margin: 34px 0px 0px 20px;
+        }
+
+        #fb3>div:nth-child(3)>img {
+            height: 50px;
+            margin-top: 20px;
+            margin-left: 260px;
+        }
+
+        #fb3>div:nth-child(4)>img {
+            height: 50px;
+            margin-top: 20px;
+            margin-left: 60px;
+        }
+
+
+
+        /* skdvnskv */
+    </style>
+</head>
+
+<body>
+    <!-- completed-->
+    <div id="nav">
+        <div id="img">
+            <a href="LandingPage.html"> <img
+                    src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcRJyN8o4Dj6hfqO_hrinsac8XKeR4jJN7qLpQ&usqp=CAU"
+                    alt="">
+            </a>
+        </div>
+        <div id="blog">
+            <a href="signUp.html">
+                <p>Blog</p>
+            </a>
+            <a href="signUp.html">
+                <p>Register As A Professional</p>
+            </a>
+            <a href="signUp.html">
+                <p id="name"></p>
+            </a>
+        </div>
+    </div>
+    <!-- completed-->
+    <div id="fst">
+        <div>
+            <img src="https://res.cloudinary.com/urbanclap/image/upload/q_40,f_auto/categories/category_v2/category_19be5040.jpeg"
+                alt="">
+        </div>
+        <div>
+            <p>HIREXPERT</p>
+            <h3>Quality home services,on demand</h3>
+            <p>Experienced, hand-picked Professionals to serve you at your <br> doorstep</p>
+
+            <div id="select">
+                <p>Where do you need a service?</p>
+                <select id="filter">
+                    <option value="">Select your city</option>
+                    <option value="PUNE">PUNE</option>
+                    <option value="MUMBAI">MUMBAI</option>
+                    <option value="NAGPUR">NAGPUR</option>
+                    <option value="AURANGABAD">AURANGABAD</option>
+                    <option value="NASHIK">NASHIK</option>
+                    <option value="SANGLI">SANGLI</option>
+                    <option value="THANE">THANE</option>
+                    <option value="SOLAPUR">SOLAPUR</option>
+                </select>
+            </div>
+        </div>
+
+    </div>
+    <!-- completed-->
+    <div id="sec">
+        <div>
+            <h3>Why Hirexpert ?</h3>
+            <div>
+                <img src="https://res.cloudinary.com/urbanclap/image/upload/q_40,f_auto/categories/category_v2/category_29614d40.png"
+                    alt="">
+                <div>
+                    <p class="big">Transparent pricing</p>
+                    <p class="small">See fixed prices before you book. No hidden charges.</p>
+                </div>
+            </div>
+
+
+            <div>
+                <img src="https://res.cloudinary.com/urbanclap/image/upload/q_40,f_auto/categories/category_v2/category_2cc7d0d0.png"
+                    alt="">
+                <div>
+                    <p class="big">Experts only</p>
+                    <p class="small">Our Professionals are well trained and have on-job expertise.</p>
+                </div>
+            </div>
+
+
+            <div>
+                <img src="https://res.cloudinary.com/urbanclap/image/upload/q_40,f_auto/categories/category_v2/category_29614d40.png"
+                    alt="">
+                <div>
+                    <p class="big">Fully equiped</p>
+                    <p class="small">We bring everything needed to get the job done well.</p>
+                </div>
+            </div>
+        </div>
+
+        <div id="asure">
+            <img src="https://res.cloudinary.com/urbanclap/image/upload/q_20,f_auto/categories/category_v2/category_cb4d9130.png"
+                alt="">
+            <h1>100% Quality Assured</h1>
+            <p>If you don't love our service, we will make it right.</p>
+        </div>
+    </div>
+    <!-- completed-->
+    <div id="line">
+
+    </div>
+    <!-- completed-->
+    <div id="book">
+        <div>
+            <h2>Book professionals from your phone</h2>
+            <p>Enter your mobile number to get the App download link.</p>
+            <div id="spns">
+                <span><img
+                        src="https://media.istockphoto.com/id/472317739/vector/flag-of-india.jpg?s=612x612&w=0&k=20&c=ejlQRX4C_Mb40wz1JQcB5vKYcOKlfRtry2W6UcX6mlo="
+                        alt=""></span>
+                <span>+91</span>
+                <span> <input type="text" name="" id="ip"> </span>
+                <span><button id="but">Send</button></span>
+            </div>
+            <span id="imges"><img
+                    src="https://images.urbanclap.com/image/upload/categories/category_v2/category_7f907eb0.png" alt="">
+                <img src="https://images.urbanclap.com/image/upload/categories/category_v2/category_7f741d10.png"
+                    alt="">
+            </span>
+        </div>
+
+        <div id="two">
+            <img src="https://res.cloudinary.com/urbanclap/image/upload/w_300,f_auto/categories/category_v2/category_2d7045d0.png"
+                alt="">
+            <img src="https://res.cloudinary.com/urbanclap/image/upload/w_350,f_auto/categories/category_v2/category_2d013050.png"
+                alt="">
+        </div>
+    </div>
+
+
+    <div id="footbar">
+
+        <div id="fb1">
+            <div> <span>About Us</span> <span>UC Impact</span><span>Terms & Conditions</span><span>Privacy Policy</span>
+                <span>Interest-Based Advertising</span><span>Anti Descrimination Policy</span><span>Partner Welfare
+                    Policy</span>
+            </div>
+            <div>
+                <span>Information Security Policy Statement &
+                    Objective</span><span>Blog</span><span>Reviews</span><span>Neer
+                    Me</span><span>Careers</span><span>Gift Cards</span><span>Contact Us</span><span>Quick Links</span>
+            </div>
+        </div>
+
+        <div id="fb2">
+            <h4>Serving In</h4>
+            <h5>IND</h5>
+            <div>
+                <span>Pune</span><span>Mumbai</span><span>Nagpur</span><span>Thane</span><span>Aurangabad</span><span>Nagpur</span><span>Delhi</span><span>Amritsar</span><span>Hydrabad</span><span>Indore</span><span>Jaipur</span><span>Ludhiana</span><span>Coimbatur</span><br>
+                <div id="ln">
+                    <span>Dehradun</span>Mysure<span></span><span>Merut</span><span>Jaisalmer</span><span>Jodhpur</span><span>Barner</span><span>Bikaner</span><span>Jabalpur</span><span>Jaipur</span><span>Ranchi</span><span>Patna</span><span>Panipat</span><span>Nashik</span><span>Ahmedabad</span>
+                </div>
+                <div id="fs">
+                    <span>Agra</span><span>Amritsar</span><span>Vijaywada</span><span>Varanasi</span><span></span></div>
+            </div>
+
+            <h5>USA</h5>
+            <div id="fs"> <span>Dubai</span><span>Abu Dhabi</span><span>Sharjah</span><span></span></div>
+
+            <h5>SGP</h5>
+            <div id="fs"> <span>Singapur</span></div>
+
+            <h5>JPN</h5>
+            <div id="fs"> <span>Tokyo</span></div>
+
+            <h5>KSA</h5>
+            <div id="fs"> <span>Jeddha</span> <span>Riyadh</span> </div>
+
+        </div>
+
+        <div id="fb3">
+            <div>
+                <a href=""> <img
+                        src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcRJyN8o4Dj6hfqO_hrinsac8XKeR4jJN7qLpQ&usqp=CAU"
+                        alt="">
+                </a>
+            </div>
+
+            <div>@2014-22 UrbanClap Technologies India Pvt. Ltd.</div>
+            <div><img src="https://images.urbanclap.com/image/upload/categories/category_v2/category_7f907eb0.png"
+                    alt=""></div>
+            <div><img src="https://images.urbanclap.com/image/upload/categories/category_v2/category_7f741d10.png"
+                    alt=""></div>
+
+        </div>
+
+    </div>
+
+
+</body>
+
+</html>
+<script>
+
+let val= localStorage.getItem("NAME")
+document.querySelector("#name").innerText=val;
+
+let filtr=document.querySelector("#filter")
+filtr.addEventListener("change", (res)=>{
+
+res.preventDefault();
+localStorage.setItem("CITY" , filtr.value)
+console.log(filtr.value)
+
+})
+
+
+
+</script>
