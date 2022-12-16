@@ -7,6 +7,11 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Document</title>
    <link rel="stylesheet" href="signup.css">
+   <style>
+    form{
+        display: none;
+    }
+   </style>
 </head>
 
 <body>
@@ -30,25 +35,21 @@
     </div>
 
     <div id="mid">
-        <h4>Sign Up</h4>
-        <div id="btns" >
-            <a href="https://www.facebook.com/"><button id="fbb" >Facebook</button></a>
-        <a href="https://accounts.google.com/v3/signin/identifier?dsh=S1594547331%3A1668072754532786&authuser=0&continue=https%3A%2F%2Fmail.google.com&ec=GAlAFw&hl=en-GB&service=mail&flowName=GlifWebSignIn&flowEntry=AddSession"><button id="gol" >&nbsp&nbsp&nbsp Google &nbsp&nbsp&nbsp&nbsp</button></a>
+        <h4>PAYMENT</h4>
+        <div id="btns" style="display: flex; flex-direction: column; margin-left: 20px; margin-bottom: 30px;" >
+            <a href=""><button id="fbb" style="width:309px ;" >Pay On Delivery</button></a> <p style="margin: 20px 0px -2px -10px;">OR</p>
+        <a href=""><button id="gol" style="width: 307px; margin-left: 12px;" >&nbsp&nbsp&nbsp PAY ONLINE &nbsp&nbsp&nbsp&nbsp</button></a>
     </div>
-            <p id="or">OR</p>
            
-        <form action="signin.html">
-            <input type="text" placeholder="First Name" id="fist"><br>
-            <input type="text" placeholder="Last Name" id="last" ><br>
-            <input type="email" placeholder="Email Address" id="mail" ><br>
-            <input type="text" placeholder="Username" id="user" ><br>
-            <input type="password" placeholder="Password" id="pass"><br>
-            <input type="password" placeholder="Confirm Password" id="cpass" ><br> 
+        <form action="otp.html">
+            <input type="number" placeholder="Card No." id="fist"><br>
+            <input type="text" placeholder="Card Holder Name" id="last" ><br>
+            <input type="number" placeholder="CVV" id="mail" ><br>
+            <input type="number" placeholder="Expiry Date" id="user" ><br>
             <input type="checkbox" id="chb" >
-            <p id="pc" >I agree to the Hirexpert terms of service and privacy policy &nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp</p><br>
-            <input type="submit" id="join" value="JOIN">
+            <p id="pc" >I agree to the Hirexpert's all  terms of service and privacy policy &nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp</p><br>
+            <input type="submit" id="join" value="PAY">
         </form>
-        <div id="already">Already a member?<a href="signin.html" target="blank" > Sign In</a></div>
     </div>
 
     <div id="footbar">
@@ -113,4 +114,22 @@
 </body>
 
 </html>
-<script src="signup.js"></script>
+
+<script>
+
+document.querySelector("#fbb").addEventListener("click" , ()=>{
+    alert("Our Professional will reach at your address within 30 minuts.")
+})
+
+document.querySelector("#gol").addEventListener("click" , (res)=>{
+    res.preventDefault()
+    document.querySelector("form").style.display="block";
+
+    // window.location.assign("otp.html")
+
+})
+
+
+
+
+</script>

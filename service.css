@@ -399,6 +399,7 @@
             margin-bottom: 2px;
             margin-left: -3px;
             transition: 0.3s;
+            cursor: pointer;
         }
 
         #fore>div>p {
@@ -467,6 +468,7 @@
             margin-bottom: 2px;
             margin-left: -3px;
             transition: 0.3s;
+            cursor: pointer;
         }
         #line3{
             height: 20px;
@@ -520,7 +522,8 @@
         }
 
         #footbar span:hover {
-            color: white
+            color: white;
+            cursor: pointer;
         }
 
         #fb1 {
