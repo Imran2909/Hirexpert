@@ -5,7 +5,7 @@
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Document</title>
+    <title>Cart</title>
     <link rel="stylesheet" href="cart.css">
 </head>
 
@@ -121,16 +121,12 @@
                     <hr id="lin">
                     <p id="strep">Installation of one wall decore item</p>
                     <p id="view">View details</p>
-
                 </div>
-
                 <div id="sec2">
                     <img src="https://res.cloudinary.com/urbanclap/image/upload/t_high_res_template,q_auto:low,f_auto/w_96,dpr_1,fl_progressive:steep,q_auto,c_limit/images/growth/luminosity/1651660885620-4cdb32.png"
                         alt="">
                     <button>Add</button>
                 </div>
-
-
             </div>
 
 
@@ -538,7 +534,7 @@
 
     <div id="total">
         <h1>₹129</h1>
-        <button>View Cart</button>
+        <button>PROCEED TO PAY</button>
     </div>
 
 
@@ -546,6 +542,101 @@
 
 </html>
 
+<script>
 
+
+    let dataa = JSON.parse(localStorage.getItem("set"));
+    // console.log(data)
+
+    let pdiva = document.createElement("div");
+    pdiva.setAttribute("class", "sec");
+
+
+    let sec1a = document.createElement("div");
+    sec1a.setAttribute("class", "sec1")
+
+    let secpa=document.createElement("p");
+    secpa.setAttribute("id" , "secp");
+    secpa.innerText=dataa.name;
+
+    let stra=document.createElement("div");
+    stra.setAttribute("id" , "str");
+
+    let ratea=document.createElement("img");
+    ratea.setAttribute("id" , "rate");
+    ratea.src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcQft8rN1GQlKlwsvzM39TZ4P4kpLSer3V01uQ&usqp=CAU";
+
+    let strepa=document.createElement("p");
+    strepa.setAttribute("id" , "strep");
+    strepa.innerText=dataa.rate;
+
+
+    let pricea=document.createElement("div");
+    pricea.setAttribute("id" , "price");
+
+    let rupeea=document.createElement("p");
+    rupeea.setAttribute("id" , "rupee");
+    rupeea.innerText= "₹"+dataa.valu;
+
+    let dota=document.createElement("span");
+    dota.setAttribute("id" , "dot");
+
+    let strep1a=document.createElement("p");
+    strep1a.setAttribute("id" , "strep");
+    strep1a.innerText=dataa.time;
+
+    let taga=document.createElement("div")
+    taga.setAttribute("id" , "tag");
+
+    let ssa=document.createElement("img");
+    ssa.src="https://www.shutterstock.com/image-vector/price-tag-icon-vector-illustration-600w-1705412608.jpg";
+
+
+    let strep2a=document.createElement("p");
+    strep2a.setAttribute("id" , "strep");
+    strep2a.innerText=dataa.offr;
+
+    let hra=document.createElement("hr");
+    hra.setAttribute("id" , "lin")
+
+
+    let strep3a=document.createElement("p");
+    strep3a.setAttribute("id" , "strep");
+    strep3a.innerText=dataa.work;
+
+    let viewa=document.createElement("p");
+    viewa.setAttribute("id" , "view");
+    viewa.innerText="View details";
+
+    let sec2a=document.createElement("div");
+    sec2a.setAttribute("id" , "sec2");
+
+    let imgja=document.createElement("img");
+    imgja.src=dataa.imgl;
+    imgja.style.width="96px";
+    imgja.style.height="95px"
+
+    let butna=document.createElement("button");
+    butna.innerText="Add"
+
+
+    // border-radius: 8px;
+    // margin-left: 32px;
+    // margin-top: 14px;
+
+
+
+stra.append(ratea,strepa);
+pricea.append(rupeea,dota,strep1a);
+taga.append(ssa,strep2a);
+sec1a.append(secpa,stra,pricea,taga,hra,strep3a,viewa);
+sec2a.append(imgja,butna);
+pdiva.append(sec1a,sec2a);
+
+// id bok>div append
+
+document.querySelector("#bok>div").append(pdiva)
+
+</script>
 
 <script src="cart.js"></script>

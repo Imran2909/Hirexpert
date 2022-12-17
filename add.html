@@ -5,8 +5,8 @@
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>SIGN IN</title>
-    <link rel="stylesheet" href="signin.css">
+    <title>Add</title>
+   <link rel="stylesheet" href="signup.css">
 </head>
 
 <body>
@@ -29,30 +29,21 @@
         </div>
     </div>
 
-
     <div id="mid">
-        <h4>Sign In</h4>
-        <div id="btns">
-            <a href="https://www.facebook.com/"><button id="fbb">Facebook</button></a>
-            <a
-                href="https://accounts.google.com/v3/signin/identifier?dsh=S1594547331%3A1668072754532786&authuser=0&continue=https%3A%2F%2Fmail.google.com&ec=GAlAFw&hl=en-GB&service=mail&flowName=GlifWebSignIn&flowEntry=AddSession"><button
-                    id="gol">&nbsp&nbsp&nbsp Google &nbsp&nbsp&nbsp&nbsp</button></a>
-
-        </div>
-        <p id="or">OR</p>
-        <form action="Home.html">
-            <input type="text" placeholder="Username" id="usrnm"><br>
-            <input type="password" placeholder="Password" id="psswrd"><br>
-            <input type="checkbox" id="chbl">
-            <p id="pcl">Remember Me</p><br>
-            <button id="join">SIGN IN</button>
+        <h4 style="margin-bottom: 30px;">Add New Service</h4>
+       
+           
+        <form action="cart.html">
+            <input type="text" placeholder="Service Name" id="name"><br>
+            <input type="text" placeholder="Rating" id="rate" ><br>
+            <input type="text" placeholder="Rate" id="valu" ><br>
+            <input type="text" placeholder="Time" id="time" ><br>
+            <input type="text" placeholder="Offer" id="offr" ><br>
+            <input type="text" placeholder="Work" id="work"><br>
+            <input type="text" placeholder="Image link" id="imgl" ><br> 
+            <input type="submit" id="join" value="ADD TO SERVICE">
         </form>
-        <a href="signin.html" target="blank" id="alreadyl">Forgot Password?</a>
-        <p id="ppl">Not a member yet? <span id="itsfree"></span> <a href="join.html" id="jn">Join now -- it's free!</a>
-        </p>
     </div>
-
-
 
     <div id="footbar">
 
@@ -112,9 +103,40 @@
         </div>
 
     </div>
-    SIGN IN
 
 </body>
-
 </html>
-<script src="signin.js"></script>
+<script>
+
+document.querySelector("form").addEventListener("submit" , (rew)=>{
+rew.preventDefault()
+    let name=document.querySelector("#name").value;
+    let rate=document.querySelector("#rate").value;
+    let valu=document.querySelector("#valu").value;
+    let time=document.querySelector("#time").value;
+    let offr=document.querySelector("#offr").value;
+    let work=document.querySelector("#work").value;
+    let imgl=document.querySelector("#imgl").value;
+
+    if(name==""||rate==""||time==""||offr==""||work==""||imgl==""){
+        alert("Please fill all data")
+    }
+    else{
+   
+    let ads={
+        name,
+        rate,
+        valu,
+        time,
+        offr,
+        work,
+        imgl
+    }
+    
+    localStorage.setItem("set" , JSON.stringify(ads))
+     
+}
+
+})
+
+</script>

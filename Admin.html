@@ -1,0 +1,85 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" href="admin.css">
+</head>
+<body>
+
+
+    <div> User Details</div>
+
+    <div id="ad">
+        <button>Add New Service</button>
+    </div>
+
+    <table >
+        <thead>
+            <tr>
+                <th>Name</th>
+                <th>Email</th>
+                <th>Username</th>
+                <th>Password</th>
+                <th>Delete</th>
+            </tr>
+        </thead>
+        <tbody>
+          
+        </tbody>
+    </table>
+
+</body>
+</html>
+
+<script>
+
+let data= JSON.parse(localStorage.getItem("Data")) || [];
+// console.log(data)
+
+function DisplayData(data){
+document.querySelector("tbody").innerHTML=""
+    data.forEach((elem,i)=>{
+        let tr=document.createElement("tr");
+        let td1=document.createElement("td");
+        td1.innerText=elem.fir;
+        let td2=document.createElement("td");
+        td2.innerText=elem.eml;
+        let td3=document.createElement("td");
+        td3.innerText=elem.usr;
+        let td4=document.createElement("td");
+        td4.innerText=elem.pas;
+        let but=document.createElement("button");
+        but.innerText="Delete";
+        but.addEventListener("click" , ()=>{
+            deleteData(elem,i)
+        })
+
+
+        tr.append(td1,td2,td3,td4,but);
+        document.querySelector("tbody").append(tr)
+
+    })
+
+}
+
+DisplayData(data)
+
+
+function deleteData(elem,i){
+
+    data.splice(i,1);
+    localStorage.setItem("Data" , JSON.stringify(data))
+    DisplayData(data)
+
+}
+
+document.querySelector("#ad>button").addEventListener("click" , ()=>{
+    window.location.assign("add.html")
+})
+
+
+
+</script>

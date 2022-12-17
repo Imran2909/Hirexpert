@@ -280,7 +280,7 @@
     
 }
 #total>button{
-    width: 180px;
+    width: 200px;
     height: 56px;
     border-radius: 9px;
     border: none;
@@ -294,7 +294,7 @@
     cursor: pointer;
 }
 #total>button:hover{
-    width: 184px;
+    width: 204px;
     height: 60px;
     margin: -2px -2px;
     transition: 0.3s;
